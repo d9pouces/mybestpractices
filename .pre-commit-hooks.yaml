@@ -1,6 +1,6 @@
 -   id: git-python-autotag
-    name: Trim Trailing Whitespace
-    description: This hook trims trailing whitespace.
+    name: Automatically add a new git tag when the project version is updated.
+    description: This hook reads the version of your project in setup.cfg or pyproject.toml and add a git tag if this versino is changed.
     entry: git-python-autotag
     language: python
     types: [text]
