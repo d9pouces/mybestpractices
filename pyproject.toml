@@ -6,7 +6,8 @@ authors = ["Matthieu Gallet <github@19pouces.net>"]
 readme = "README.md"
 
 [tool.poetry.dependencies]
-python = "^3.11"
+python = "^3.9"
+toml = "^0.10.2"
 
 
 [build-system]
@@ -14,4 +15,4 @@ requires = ["poetry-core"]
 build-backend = "poetry.core.masonry.api"
 
 [tool.poetry.scripts]
-run = "mybestpractices.git_autotag:git_autotag"
+mybestpractices-python-git-autotag = "mybestpractices.git_autotag:git_autotag"

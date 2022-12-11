@@ -1,7 +1,12 @@
 """Discover some project metadata."""
 import pathlib
 
-import tomllib
+try:
+    import tomllib
+except ImportError:
+    tomllib = None
+    import toml
+
 from setuptools.config import read_configuration
 
 
@@ -24,8 +29,12 @@ def get_main_metadata(path: pathlib.Path):
         name = config.get("name")
         version = config.get("version")
     elif (path / "pyproject.toml").is_file():
-        with open(path / "pyproject.toml", "rb") as fd:
-            data = tomllib.load(fd)
+        if tomllib:
+            with open(path / "pyproject.toml", "rb") as fd:
+                data = tomllib.load(fd)
+        else:
+            with open(path / "pyproject.toml") as fd:
+                data = toml.load(fd)
         version = data.get("project", {}).get("version")
         name = data.get("project", {}).get("name")
         if version is None:
