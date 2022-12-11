@@ -1,0 +1,9 @@
+-   id: git-python-autotag
+    name: Trim Trailing Whitespace
+    description: This hook trims trailing whitespace.
+    entry: git-python-autotag
+    language: python
+    types: [text]
+    pass_filenames: false
+    stages:
+      - post-commit

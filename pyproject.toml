@@ -1,0 +1,17 @@
+[tool.poetry]
+name = "mybestpractices"
+version = "0.1.0"
+description = "Apply best practices to your Python code"
+authors = ["Matthieu Gallet <github@19pouces.net>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.scripts]
+run = "mybestpractices.git_autotag:git_autotag"
