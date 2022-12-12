@@ -1,0 +1,82 @@
+-   repo: https://github.com/d9pouces/mybestpractices
+    hooks:
+    -   id: mybestpractices-git-autotag
+-   repo: https://github.com/pre-commit/pre-commit-hooks
+    hooks:
+    -   id: check-added-large-files
+    -   id: check-ast
+    -   id: check-byte-order-marker
+    -   id: check-docstring-first
+    -   id: check-case-conflict
+    -   id: check-executables-have-shebangs
+    -   id: check-shebang-scripts-are-executable
+    -   id: pretty-format-json
+    -   id: check-json
+    -   id: check-merge-conflict
+    -   id: check-toml
+    -   id: check-yaml
+    -   id: check-xml
+    -   id: end-of-file-fixer
+    -   id: fix-byte-order-marker
+    -   id: mixed-line-ending
+    -   id: requirements-txt-fixer
+    -   id: trailing-whitespace
+-   repo: https://github.com/psf/black
+    hooks:
+    -   id: black
+-   repo: https://github.com/PyCQA/flake8
+    hooks:
+    -   id: flake8
+-   repo: https://github.com/PyCQA/pydocstyle
+    hooks:
+    -   id: pydocstyle
+-   repo: https://github.com/PyCQA/isort
+    hooks:
+    -   id: isort
+-   repo: https://github.com/PyCQA/bandit
+    hooks:
+    -   id: bandit
+-   repo: https://github.com/PyCQA/doc8
+    hooks:
+    -   id: doc8
+-   repo: https://github.com/PyCQA/docformatter
+    hooks:
+    -   id: docformatter
+-   repo: https://github.com/shellcheck-py/shellcheck-py
+    hooks:
+    -   id: shellcheck
+-   repo: https://github.com/FalconSocial/pre-commit-mirrors-pep257
+    hooks:
+    -   id: pep257
+-   repo: https://github.com/asottile/blacken-docs
+    hooks:
+    -   id: blacken-docs
+-   repo: https://github.com/ansible-community/ansible-lint
+    hooks:
+    -   id: ansible-lint
+-   repo: https://github.com/awebdeveloper/pre-commit-tslint
+    hooks:
+    -   id: tslint
+-   repo: https://github.com/pre-commit/pygrep-hooks
+    hooks:
+    -   id: python-check-blanket-noqa
+    -   id: python-check-mock-methods
+    -   id: python-no-eval
+    -   id: python-no-log-warn
+    -   id: python-use-type-annotations
+    -   id: rst-backticks
+    -   id: rst-directive-colons
+    -   id: rst-inline-touching-normal
+    -   id: text-unicode-replacement-char
+-   repo: https://github.com/pre-commit/mirrors-csslint
+    hooks:
+    -   id: csslint
+-   repo: https://github.com/pre-commit/mirrors-eslint
+    hooks:
+    -   id: eslint
+-   repo: https://github.com/pre-commit/mirrors-jshint
+    hooks:
+    -   id: jshint
+-   repo: https://github.com/pre-commit/mirrors-scsslint
+    hooks:
+    -   id: scss-lint

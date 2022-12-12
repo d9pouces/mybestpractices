@@ -6,7 +6,6 @@ Python
 * templates ansible : {% ansible_templated %}
 * utilisation de pre-commit
 * utilisation de .gitignore
-* utilisation de setup.cfg ou pyproject.toml
 
 .pre-commit-config.yaml
 # See https://pre-commit.com for more information
