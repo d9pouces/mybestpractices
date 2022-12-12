@@ -1,14 +1,14 @@
--   id: mybestpractices-git-autotag
-    name: Automatically add a new git tag when the project version is updated.
-    description: This hook reads the version of your project in setup.cfg or pyproject.toml and add a git tag if this versino is changed.
-    entry: mybestpractices-git-autotag
-    language: python
-    types: [text]
-    pass_filenames: false
--   id: required-precommit-hooks
-    name: Automatically add a new git tag when the project version is updated.
-    description: This hook reads the version of your project in setup.cfg or pyproject.toml and add a git tag if this versino is changed.
-    entry: required-precommit-hooks
-    language: python
-    types: [text]
-    pass_filenames: false
+- id: mybestpractices-git-autotag
+  name: Automatically add a new git tag when the project version is updated.
+  description: This hook reads the version of your project in setup.cfg or pyproject.toml and add a git tag if this versino is changed.
+  entry: mybestpractices-git-autotag
+  language: python
+  types: [text]
+  pass_filenames: false
+- id: required-precommit-hooks
+  name: Automatically add a new git tag when the project version is updated.
+  description: This hook reads the version of your project in setup.cfg or pyproject.toml and add a git tag if this versino is changed.
+  entry: required-precommit-hooks
+  language: python
+  types: [text]
+  pass_filenames: false
