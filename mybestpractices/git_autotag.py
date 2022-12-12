@@ -1,5 +1,4 @@
 """Precommit hook that add new git tags, as required."""
-import os
 import pathlib
 import subprocess
 
@@ -8,7 +7,6 @@ from mybestpractices.project import get_main_metadata
 
 def git_autotag():
     """Add a new git tag, if required."""
-    print(os.getcwd())
     path = pathlib.Path(".").resolve()
     if not (path / ".git").is_dir():
         return

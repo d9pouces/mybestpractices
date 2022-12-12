@@ -1,7 +1,7 @@
--   id: python-git-autotag
+-   id: mybestpractices-git-autotag
     name: Automatically add a new git tag when the project version is updated.
     description: This hook reads the version of your project in setup.cfg or pyproject.toml and add a git tag if this versino is changed.
-    entry: mybestpractices-python-git-autotag
+    entry: mybestpractices-git-autotag
     language: python
     types: [text]
     pass_filenames: false

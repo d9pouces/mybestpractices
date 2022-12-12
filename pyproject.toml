@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "mybestpractices"
-version = "0.1.1"
+version = "0.1.2"
 description = "Apply best practices to your Python code"
 authors = ["Matthieu Gallet <github@19pouces.net>"]
 readme = "README.md"
@@ -15,4 +15,4 @@ requires = ["poetry-core"]
 build-backend = "poetry.core.masonry.api"
 
 [tool.poetry.scripts]
-mybestpractices-python-git-autotag = "mybestpractices.git_autotag:git_autotag"
+mybestpractices-git-autotag = "mybestpractices.git_autotag:git_autotag"
