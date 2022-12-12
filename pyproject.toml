@@ -6,7 +6,7 @@ authors = ["Matthieu Gallet <github@19pouces.net>"]
 readme = "README.md"
 
 [tool.poetry.dependencies]
-python = "^3.9"
+python = "^3.8"
 toml = "^0.10.2"
 
 
