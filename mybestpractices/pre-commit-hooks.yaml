@@ -66,9 +66,3 @@ repos:
   - id: rst-directive-colons
   - id: rst-inline-touching-normal
   - id: text-unicode-replacement-char
-- repo: https://github.com/pre-commit/mirrors-eslint
-  hooks:
-  - id: eslint
-- repo: https://github.com/pre-commit/mirrors-jshint
-  hooks:
-  - id: jshint
