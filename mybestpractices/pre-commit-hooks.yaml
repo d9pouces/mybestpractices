@@ -5,7 +5,6 @@ repos:
   - id: required-precommit-hooks
   - id: mybestpractices-structure
   - id: mybestpractices-third-party-update
-  - id: mybestpractices-copyright
 - repo: https://github.com/pre-commit/pre-commit-hooks
   hooks:
   - id: check-added-large-files
