@@ -12,23 +12,11 @@ except ImportError:
 
 
 def required_precommit_hooks():
-    """Check if all required precommit hooks are used."""
+    """Check if all required precommit hooks are configured."""
     with open_text("mybestpractices", "pre-commit-hooks.yaml") as fd:
-        expected = load(fd, Loader=Loader)
-    expected_hooks: Set[Tuple[str, str]] = set()
-    for repo_data in expected["repos"]:
-        repo_url = repo_data["repo"]
-        for hook_data in repo_data["hooks"]:
-            hook_id = hook_data["id"]
-            expected_hooks.add((repo_url, hook_id))
+        expected_hooks = read_hooks(fd)
     with open(".pre-commit-config.yaml") as fd:
-        actual = load(fd, Loader=Loader)
-    actual_hooks: Set[Tuple[str, str]] = set()
-    for repo_data in actual["repos"]:
-        repo_url = repo_data["repo"]
-        for hook_data in repo_data["hooks"]:
-            hook_id = hook_data["id"]
-            actual_hooks.add((repo_url, hook_id))
+        actual_hooks = read_hooks(fd)
     by_repo_url = defaultdict(lambda: [])
     for (repo_url, hook_id) in sorted(expected_hooks):
         if (repo_url, hook_id) in actual_hooks:
@@ -43,6 +31,18 @@ def required_precommit_hooks():
         for hook_id in hook_ids:
             print(f"    -   id: {hook_id}")
     sys.exit(1)
+
+
+def read_hooks(fd):
+    """Fetch the list of defined hooks."""
+    actual = load(fd, Loader=Loader)
+    actual_hooks: Set[Tuple[str, str]] = set()
+    for repo_data in actual["repos"]:
+        repo_url = repo_data["repo"]
+        for hook_data in repo_data["hooks"]:
+            hook_id = hook_data["id"]
+            actual_hooks.add((repo_url, hook_id))
+    return actual_hooks
 
 
 if __name__ == "__main__":

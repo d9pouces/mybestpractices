@@ -46,6 +46,9 @@ repos:
 - repo: https://github.com/shellcheck-py/shellcheck-py
   hooks:
   - id: shellcheck
+- repo: https://github.com/detailyang/pre-commit-shell
+  hooks:
+  - id: shell-lint
 - repo: https://github.com/FalconSocial/pre-commit-mirrors-pep257
   hooks:
   - id: pep257

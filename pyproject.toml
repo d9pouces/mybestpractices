@@ -9,6 +9,7 @@ readme = "README.md"
 python = "^3.8"
 toml = "^0.10.2"
 pyyaml = ">=5.1"
+airspeed = "^0.5.20"
 
 
 [build-system]
@@ -17,4 +18,7 @@ build-backend = "poetry.core.masonry.api"
 
 [tool.poetry.scripts]
 mybestpractices-git-autotag = "mybestpractices.git_autotag:git_autotag"
+mybestpractices-gitignore = "mybestpractices.gitignore:gitignore"
+mybestpractices-copyright = "mybestpractices.copyright:check_copyright"
+mybestpractices-third-party-update = "mybestpractices.vendor_update:vendor_update"
 required-precommit-hooks = "mybestpractices.required_precommit_hooks:required_precommit_hooks"

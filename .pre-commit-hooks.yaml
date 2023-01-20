@@ -12,3 +12,23 @@
   language: python
   types: [text]
   pass_filenames: false
+- id: mybestpractices-gitignore
+  name: Automatically add a new git tag when the project version is updated.
+  description: This hook reads the version of your project in setup.cfg or pyproject.toml and add a git tag if this versino is changed.
+  entry: mybestpractices-gitignore
+  language: python
+  files: .gitignore
+  pass_filenames: false
+- id: mybestpractices-third-party-update
+  name: Update vendor (third-party) components
+  description: This hook reads the version of your project in setup.cfg or pyproject.toml and add a git tag if this versino is changed.
+  entry: mybestpractices-third-party-update
+  language: python
+  pass_filenames: false
+- id: mybestpractices-copyright
+  name: Update vendor (third-party) components
+  description: This hook reads the version of your project in setup.cfg or pyproject.toml and add a git tag if this versino is changed.
+  entry: mybestpractices-copyright
+  language: python
+  pass_filenames: false
+  args: ["--script", "tools/update_third_party.sh"]
