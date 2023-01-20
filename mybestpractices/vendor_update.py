@@ -21,3 +21,7 @@ def vendor_update(
     if not path.exists():
         return
     subprocess.check_call([path.resolve()], shell=True)  # nosec
+
+
+if __name__ == "__main__":
+    main()

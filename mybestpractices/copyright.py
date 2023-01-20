@@ -35,17 +35,19 @@ class Config:
 def main():
     """Read CLI args and launches the check."""
     parser = argparse.ArgumentParser()
-    parser.add_argument("--license", default="LICENSE")
-    parser.add_argument("--readme", default="README.md")
+    parser.add_argument("--copyright", default="tools/copyright.txt")
     args = parser.parse_args()
-    check_copyright(readme=args.readme, license_=args.license)
+    check_copyright(copyright_=args.copyright)
 
 
 def check_copyright(
-    readme: Optional[str] = None,
-    license_: Optional[str] = None,
+    copyright_: Optional[str] = None,
 ):
     """Ensure that the copyright is valid on each file."""
     pass
     # noinspection PyUnusedLocal
-    readme, license_ = readme, license_
+    copyright_ = copyright_
+
+
+if __name__ == "__main__":
+    main()

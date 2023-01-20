@@ -11,7 +11,7 @@ except ImportError:
     from yaml import Loader, load
 
 
-def required_precommit_hooks():
+def main():
     """Check if all required precommit hooks are configured."""
     with open_text("mybestpractices", "pre-commit-hooks.yaml") as fd:
         expected_hooks = read_hooks(fd)
@@ -46,4 +46,4 @@ def read_hooks(fd):
 
 
 if __name__ == "__main__":
-    required_precommit_hooks()
+    main()

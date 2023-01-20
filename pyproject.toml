@@ -17,8 +17,8 @@ requires = ["poetry-core"]
 build-backend = "poetry.core.masonry.api"
 
 [tool.poetry.scripts]
-mybestpractices-git-autotag = "mybestpractices.git_autotag:git_autotag"
-mybestpractices-gitignore = "mybestpractices.gitignore:gitignore"
-mybestpractices-copyright = "mybestpractices.copyright:check_copyright"
-mybestpractices-third-party-update = "mybestpractices.vendor_update:vendor_update"
-required-precommit-hooks = "mybestpractices.required_precommit_hooks:required_precommit_hooks"
+mybestpractices-copyright = "mybestpractices.copyright:main"
+mybestpractices-git-autotag = "mybestpractices.git_autotag:main"
+mybestpractices-structure = "mybestpractices.structure:main"
+mybestpractices-third-party-update = "mybestpractices.vendor_update:main"
+required-precommit-hooks = "mybestpractices.required_precommit_hooks:main"
