@@ -6,8 +6,8 @@
   types: [text]
   pass_filenames: false
 - id: required-precommit-hooks
-  name: Automatically add a new git tag when the project version is updated.
-  description: This hook reads the version of your project in setup.cfg or pyproject.toml and add a git tag if this versino is changed.
+  name: Check if a list of important pre-commit hooks are selected.
+  description: Check if a list of pre-commit hooks are selected, and display the configuration to add them if they are missing.
   entry: required-precommit-hooks
   language: python
   types: [text]
