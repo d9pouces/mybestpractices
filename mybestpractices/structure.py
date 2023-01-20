@@ -9,6 +9,7 @@ def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("--license", default="LICENSE")
     parser.add_argument("--readme", default="README.md")
+    parser.add_argument("--gitignore", default="gitignore")
     parser.add_argument("--copyright", default="tools/copyright.txt")
     args = parser.parse_args()
 

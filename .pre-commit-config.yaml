@@ -2,10 +2,11 @@
 # See https://pre-commit.com/hooks.html for more hooks
 repos:
   - repo: https://github.com/d9pouces/mybestpractices
-    rev: 0.2.0
+    rev: 0.2.2
     hooks:
       - id: mybestpractices-git-autotag
-      - id: required-precommit-hooks
+      - id: mybestpractices-copyright
+      - id: mybestpractices-third-party-update
   - repo: https://github.com/pre-commit/pre-commit-hooks
     rev: v4.4.0
     hooks:
