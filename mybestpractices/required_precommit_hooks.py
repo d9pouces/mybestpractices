@@ -1,7 +1,7 @@
 """Check if required pre-commit hooks are actually checked."""
+import pathlib
 import sys
 from collections import defaultdict
-from importlib.resources import open_text
 from typing import Dict, Tuple
 
 try:
@@ -13,10 +13,9 @@ except ImportError:
 
 def main():
     """Check if all required precommit hooks are configured."""
-    with open_text("mybestpractices", "pre-commit-hooks.yaml") as fd:
-        expected_hooks = read_hooks(fd)
-    with open(".pre-commit-config.yaml") as fd:
-        actual_hooks = read_hooks(fd)
+    requirements = pathlib.Path(__file__).parent / "pre-commit-hooks.yaml"
+    expected_hooks = read_hooks(requirements)
+    actual_hooks = read_hooks(".pre-commit-config.yaml")
     by_repo_url = defaultdict(lambda: [])
     for (key, hook_data) in sorted(expected_hooks.items()):
         repo_url, hook_id = key
@@ -30,14 +29,17 @@ def main():
     for (repo_url, hooks) in sorted(by_repo_url.items()):
         print(f"""-   repo: {repo_url}\n    rev: 0.0.0\n    hooks:""")
         for hook_data in hooks:
+            c = "-"
             for k, v in hook_data.items():
-                print(f"    -   {k}: {v}")
+                print(f"    {c}   {k}: {v}")
+                c = " "
     sys.exit(1)
 
 
-def read_hooks(fd):
+def read_hooks(filename):
     """Fetch the list of defined hooks."""
-    actual = load(fd, Loader=Loader)
+    with open(filename) as fd:
+        actual = load(fd, Loader=Loader)
     actual_hooks: Dict[Tuple[str, str], Dict] = {}
     for repo_data in actual["repos"]:
         repo_url = repo_data["repo"]

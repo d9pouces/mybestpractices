@@ -2,7 +2,7 @@
 # See https://pre-commit.com/hooks.html for more hooks
 repos:
   - repo: https://github.com/d9pouces/mybestpractices
-    rev: 0.1.4
+    rev: 0.2.0
     hooks:
       - id: mybestpractices-git-autotag
       - id: required-precommit-hooks
@@ -21,21 +21,8 @@ repos:
     rev: 22.12.0
     hooks:
       - id: black
-  - repo: https://github.com/PyCQA/flake8
-    rev: 6.0.0
-    hooks:
-      - id: flake8
-        args: ["--max-line-length", "88"]
-  - repo: https://github.com/PyCQA/pydocstyle
-    rev: 6.1.1
-    hooks:
-      - id: pydocstyle
-  - repo: https://github.com/PyCQA/isort
-    rev: 5.10.1
-    hooks:
-      - id: isort
   - repo: https://github.com/pre-commit/pygrep-hooks
-    rev: v1.9.0
+    rev: v1.10.0
     hooks:
       - id: rst-inline-touching-normal
       - id: rst-directive-colons
@@ -53,15 +40,15 @@ repos:
     hooks:
       - id: bandit
   - repo: https://github.com/PyCQA/doc8
-    rev: v1.0.0
+    rev: v1.1.1
     hooks:
       - id: doc8
   - repo: https://github.com/PyCQA/docformatter
-    rev: v1.5.0
+    rev: v1.6.0.rc1
     hooks:
       - id: docformatter
   - repo: https://github.com/asottile/blacken-docs
-    rev: v1.12.1
+    rev: 1.13.0
     hooks:
       - id: blacken-docs
   - repo: https://github.com/awebdeveloper/pre-commit-tslint
@@ -73,7 +60,7 @@ repos:
     hooks:
       - id: csslint
   - repo: https://github.com/pre-commit/mirrors-eslint
-    rev: v8.29.0
+    rev: v8.32.0
     hooks:
       - id: eslint
   - repo: https://github.com/pre-commit/mirrors-jshint
@@ -94,13 +81,32 @@ repos:
       - id: requirements-txt-fixer
       - id: trailing-whitespace
   - repo: https://github.com/pre-commit/pygrep-hooks
-    rev: v1.9.0
+    rev: v1.10.0
     hooks:
       - id: python-use-type-annotations
       - id: text-unicode-replacement-char
   - repo: https://github.com/shellcheck-py/shellcheck-py
-    rev: v0.8.0.4
+    rev: v0.9.0.2
     hooks:
       - id: shellcheck
+  - repo: https://github.com/PyCQA/flake8
+    rev: 6.0.0
+    hooks:
+    -   id: flake8
+        args: ['--max-line-length', '88', '--ignore', 'E203,E501,C901,F401,W503', '--max-complexity', '18', '--select', 'B,C,E,F,W,T4,B9']
+  - repo: https://github.com/PyCQA/isort
+    rev: 5.11.4
+    hooks:
+    -   id: isort
+        args: ['--trailing-comma', '--line-length', '88', '--multi-line', '3', '--profile', 'black', '--use-parentheses']
+  - repo: https://github.com/PyCQA/pydocstyle
+    rev: 6.3.0
+    hooks:
+    -   id: pydocstyle
+        args: ['--ignore', 'D100, D101, D102, D103, D104, D105, D106, D107, D203, D205, D212, D213, D400, D403, D415']
+  - repo: https://github.com/detailyang/pre-commit-shell
+    rev: 1.0.5
+    hooks:
+    -   id: shell-lint
 default_language_version:
   python: python3.8
