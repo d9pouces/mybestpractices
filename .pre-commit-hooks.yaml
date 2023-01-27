@@ -33,3 +33,10 @@
   language: python
   pass_filenames: true
   args: ["--copyright", "tools/copyright.txt"]
+- id: mybestpractices-autochangelog
+  name: Update the changelog at each commit
+  description: Use auto-changelog to update the changelog at each commit.
+  entry: auto-changelog
+  language: python
+  pass_filenames: false
+  args: []

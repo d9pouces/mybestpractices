@@ -10,6 +10,7 @@ python = "^3.8"
 toml = "^0.10.2"
 pyyaml = ">=5.1"
 airspeed = "^0.5.20"
+auto-changelog = "^0.6.0"
 
 
 [build-system]

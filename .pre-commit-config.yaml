@@ -2,7 +2,7 @@
 # See https://pre-commit.com/hooks.html for more hooks
 repos:
   - repo: https://github.com/d9pouces/mybestpractices
-    rev: 0.2.2
+    rev: 0.2.4
     hooks:
       - id: mybestpractices-git-autotag
       - id: mybestpractices-copyright
@@ -109,5 +109,10 @@ repos:
     rev: 1.0.5
     hooks:
     -   id: shell-lint
+  - repo: https://github.com/commitizen-tools/commitizen
+    rev: v2.40.0
+    hooks:
+    - id: commitizen
+
 default_language_version:
   python: python3.8
