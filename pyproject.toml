@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "mybestpractices"
-version = "0.2.4"
+version = "0.2.5"
 description = "Apply best practices to your Python code"
 authors = ["Matthieu Gallet <github@19pouces.net>"]
 readme = "README.md"

@@ -1,0 +1,16 @@
+repos:
+- repo: https://github.com/d9pouces/mybestpractices
+  hooks:
+  - id: required-precommit-hooks-django
+- repo: https://github.com/awebdeveloper/pre-commit-tslint
+  hooks:
+  - id: tslint
+- repo: https://github.com/AleksaC/hadolint-py
+  hooks:
+  - id: hadolint
+- repo: https://github.com/pre-commit/mirrors-scss-lint
+  hooks:
+  - id: scss-lint
+- repo: https://github.com/pre-commit/mirrors-eslint
+  hooks:
+  - id: eslint

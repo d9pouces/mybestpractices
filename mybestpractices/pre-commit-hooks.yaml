@@ -66,9 +66,6 @@ repos:
 - repo: https://github.com/asottile/blacken-docs
   hooks:
   - id: blacken-docs
-- repo: https://github.com/awebdeveloper/pre-commit-tslint
-  hooks:
-  - id: tslint
 - repo: https://github.com/pre-commit/pygrep-hooks
   hooks:
   - id: python-check-blanket-noqa
@@ -80,3 +77,8 @@ repos:
   - id: rst-directive-colons
   - id: rst-inline-touching-normal
   - id: text-unicode-replacement-char
+- repo: https://github.com/macisamuele/language-formatters-pre-commit-hooks
+  hooks:
+  - id: pretty-format-ini
+  - id: pretty-format-toml
+  - id: pretty-format-yaml
