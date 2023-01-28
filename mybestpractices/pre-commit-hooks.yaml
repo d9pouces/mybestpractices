@@ -51,9 +51,6 @@ repos:
 - repo: https://github.com/PyCQA/doc8
   hooks:
   - id: doc8
-- repo: https://github.com/PyCQA/docformatter
-  hooks:
-  - id: docformatter
 - repo: https://github.com/shellcheck-py/shellcheck-py
   hooks:
   - id: shellcheck
