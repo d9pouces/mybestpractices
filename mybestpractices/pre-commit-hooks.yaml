@@ -77,5 +77,8 @@ repos:
 - repo: https://github.com/macisamuele/language-formatters-pre-commit-hooks
   hooks:
   - id: pretty-format-ini
+    args: ["--autofix"]
   - id: pretty-format-toml
+    args: ["--autofix"]
   - id: pretty-format-yaml
+    args: ["--autofix"]
