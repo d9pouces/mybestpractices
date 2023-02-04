@@ -8,9 +8,10 @@ repos:
 - repo: https://github.com/AleksaC/hadolint-py
   hooks:
   - id: hadolint
-- repo: https://github.com/pre-commit/mirrors-scss-lint
+- repo: https://github.com/thibaudcolas/pre-commit-stylelint
   hooks:
-  - id: scss-lint
+  - id: stylelint
+    args: [--fix]
 - repo: https://github.com/pre-commit/mirrors-eslint
   hooks:
   - id: eslint
