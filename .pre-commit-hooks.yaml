@@ -40,3 +40,10 @@
   language: python
   pass_filenames: false
   args: []
+- id: mybestpractices-sync-npm
+  name: Update package.json to the new version.
+  description: Ensure that package.json has the same version as the Python package.
+  entry: mybestpractices-sync-npm
+  language: python
+  pass_filenames: false
+  args: ["--path", "./package.json"]
