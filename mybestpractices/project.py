@@ -27,16 +27,18 @@ def get_main_metadata(path: pathlib.Path):
         # 'License :: OSI Approved :: CEA CNRS Inr[...]on 2.1 (CeCILL-2.1)'
         # 'Programming Language :: Python :: 3.10'
         name = config.get("metadata").get("name")
-        version = config.get("metadata").get("version")
-    elif (path / "pyproject.toml").is_file():
+        version = config.get("metadata", {}).get("version")
+    if (path / "pyproject.toml").is_file():
         if tomllib is not None:
             with open(path / "pyproject.toml", "rb") as fd:
                 data = tomllib.load(fd)
         else:
             with open(path / "pyproject.toml") as fd:
                 data = toml.load(fd)
-        version = data.get("project", {}).get("version")
-        name = data.get("project", {}).get("name")
+        if version is None:
+            version = data.get("project", {}).get("version")
+        if name is None:
+            name = data.get("project", {}).get("name")
         if version is None:
             version = data.get("tool", {}).get("poetry", {}).get("version")
         if name is None:
