@@ -26,7 +26,7 @@ def get_main_metadata(path: pathlib.Path):
         # config['classifiers']
         # 'License :: OSI Approved :: CEA CNRS Inr[...]on 2.1 (CeCILL-2.1)'
         # 'Programming Language :: Python :: 3.10'
-        name = config.get("metadata").get("name")
+        name = config.get("metadata", {}).get("name")
         version = config.get("metadata", {}).get("version")
     if (path / "pyproject.toml").is_file():
         if tomllib is not None:
