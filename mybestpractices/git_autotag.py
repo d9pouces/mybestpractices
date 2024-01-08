@@ -43,7 +43,6 @@ def main(args=None):
             print(f"{version} has been added as a git tag.")
         except subprocess.SubprocessError:
             print(f"Unable to add {version} as a new tag.")
-            sys.exit(1)
 
 
 if __name__ == "__main__":
